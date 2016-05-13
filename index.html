@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Blog</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="functionality.js" ></script>
+</head>
+<body>
+	<h1>Personal Blog</h1>
+	<form id="blogform" autocomplete="off">
+  		<div class="input-blog-title"><label>Blog Title:</label><br><input type="text" name="blog-title-form" class="blog-title-form" value="" autofocus="true"></div><br>
+  		<div class="input-blog-topic"><label>Blog Topic:</label><br><input type="text" name="blog-topic-form" class="blog-topic-form" value=""></input></div><br>
+		<div class="input-blog-content"><label>Blog Content:</label><br><textarea rows="5" cols="75" class="blog-content-textarea" form="blogform"></textarea></div>
+	</form>
+	<ol class="outer-list">
+		<li class="ol-buttons-element"><button class="store-data" id="storeDataButton" onclick="storeData()" disabled="disabled">Store Data</button></li>
+		<li class="ol-buttons-element"><button class="store-data" id="toggleShow" onclick="toggleHide()">Toggle Hide</button></li>
+	</ol>
+
+	<div class="submitStatus">Status:</div>
+	<div class="content">
+	</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body{
+	font-size: 16px;
+	background-color: #f6f6f6;
+}
+button.store-data{
+	font-size: .9rem;
+	padding: .2rem;
+	text-align: center;
+}
+li.ol-buttons-element{
+	display: inline-block;
+}
+ol.outer-list{
+	list-style-type: none;
+	display: inline-block;
+}
+input[type=text]:focus {
+    border: 2px solid #3399ff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+div.input-blog-title{
+	font-size: 24px;
+	font-weight: bold;
+}
+input.blog-title-form{
+	font-size: 20px;
+}
+div.input-blog-topic{
+	font-size: 16px;
+	font-weight: bold;
+}
+input.blog-topic-form{
+	font-size: 16px;
+}
+div.input-blog-content{
+	font-size: 14px;
+	font-weight: bold;
+}
+textarea.blog-content-textarea{
+}
+div.submitStatus{
+	padding-bottom: .3rem;
+}
