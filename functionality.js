@@ -15,15 +15,23 @@ $(document).ready(function(){
 	    if($('body textarea').val() == '') filled = false;
 	    return filled;
 	}
+
 })
 
 contentVisible = true;
 
+//Function to create div's when store data button is clicked
+//Function adds divs and then wipes data via javascript
 function storeData(){
 	var formelements = document.getElementById("blogform")
 	var blogTitle = formelements.elements[0].value;
 	var blogTopic = formelements.elements[1].value;
 	var blogContent = formelements.elements[2].value;
+
+	//Wipes text boxes
+	$('.blog-title-form').val('');
+	$('.blog-topic-form').val('');
+	$('.blog-content-textarea').val('');
 
 	var blogTitleDiv = document.createElement("div");
 	blogTitleDiv.setAttribute("class", "blogTitle");
@@ -40,11 +48,13 @@ function storeData(){
 	var contentContent = document.createTextNode(blogContent); 
 	blogContentDiv.appendChild(contentContent); 
 
+	//Adds div to content div
 	document.querySelector(".content").appendChild(blogTitleDiv);
 	document.querySelector(".content").appendChild(blogTopicDiv);
 	document.querySelector(".content").appendChild(blogContentDiv);
 	document.querySelector(".content").style.visibility = (contentVisible ? "visible" : "hidden");
-	//window.alert(blogTitle)
+	
+	//Shows the number of blog posts
 	setStatus();
 	return 0;
 }
@@ -52,17 +62,18 @@ function setStatus(){
 	var contentElements = document.getElementsByClassName('blogTitle');
 	document.getElementsByClassName('submitStatus')[0].innerHTML = "Status: Complete, you have " + contentElements.length + " blog posts.";
 }
-function showBlogPosts(){
-	document.querySelector(".content").style.visibility = "visible";
-	document.getElementById("toggleShow").innerHTML = "Hide blog posts";
-	contentVisible = true;
-}
-function hideBlogPosts(){
-	document.querySelector(".content").style.visibility = "hidden";
-	document.getElementById("toggleShow").innerHTML = "Show blog posts";
-	contentVisible = false;
-}
+
 function toggleHide(){
+	function showBlogPosts(){
+		document.querySelector(".content").style.visibility = "visible";
+		document.getElementById("toggleShow").innerHTML = "Hide blog posts";
+		contentVisible = true;
+	}
+	function hideBlogPosts(){
+		document.querySelector(".content").style.visibility = "hidden";
+		document.getElementById("toggleShow").innerHTML = "Show blog posts";
+		contentVisible = false;
+	}
 	(contentVisible ? hideBlogPosts() : showBlogPosts())
 }
 function sortTitles(){

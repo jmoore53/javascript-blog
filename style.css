@@ -26,6 +26,7 @@ div.input-blog-title{
 }
 input.blog-title-form{
 	font-size: 20px;
+	font-family: Georgia;
 }
 div.input-blog-topic{
 	font-size: 16px;
@@ -33,12 +34,15 @@ div.input-blog-topic{
 }
 input.blog-topic-form{
 	font-size: 16px;
+	font-family: "Comic Sans MS";
 }
 div.input-blog-content{
 	font-size: 14px;
 	font-weight: bold;
 }
 textarea.blog-content-textarea{
+	font-size: 12px;
+	font-family: "Book Antiqua"; 
 }
 div.submitStatus{
 	padding-bottom: .3rem;
